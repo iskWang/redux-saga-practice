@@ -7,6 +7,8 @@
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.17",
+    "reactotron-react-js": "^1.12.2",
+    "reactotron-redux": "^1.12.2",
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0"
   },

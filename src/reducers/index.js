@@ -1,7 +1,7 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux'
 
-import CounterReducer from "./CounterReducer";
+import CounterReducer from './CounterReducer'
 
 export default combineReducers({
-  CounterReducer
-});
+  counter: CounterReducer
+})

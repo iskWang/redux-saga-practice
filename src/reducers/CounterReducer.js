@@ -1,17 +1,32 @@
-// import { RECEIVE_HELLO_WORLD } from "../actions";
+import { CounterTypes } from '../actions/CounterAction'
 
-// export default (state = "", { type, text = "" }) => {
-//   switch (type) {
-//     case RECEIVE_HELLO_WORLD:
-//       return text;
-//     default:
-//       return state;
-//   }
-// };
+const INIT_COUNTER_STATE = {
+  start: false,
+  time: 0
+}
 
-export default (state = '', { type, text = ''}) => {
+export default (state = INIT_COUNTER_STATE, { type = '' }) => {
+  let _nextState = ''
+
   switch (type) {
+    case CounterTypes.COUNTER_START:
+      _nextState = { ...state, start: true }
+      break
+    case CounterTypes.COUNTER_PAUSE:
+      _nextState = { ...state, start: false }
+      break
+    case CounterTypes.COUNTER_RESET:
+      _nextState = { ...state, time: 0 }
+      break
+    case CounterTypes.COUNTER_TICK:
+      _nextState = { ...state, time: state.time + 1 }
+      break
     default:
-      return state;
+      _nextState = state
+      break
   }
+
+  console.log('Current store', _nextState)
+
+  return _nextState
 }

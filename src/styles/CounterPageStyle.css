@@ -41,6 +41,7 @@ label input {
   margin: 0 5px;
   background-color: #00A2FF;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn a {
@@ -51,4 +52,13 @@ label input {
   height: 100%;
   text-decoration: none;
   color: #ffffff;
+}
+
+.btn.disable {
+  background-color: gray;
+}
+
+.btn.disable a {
+  pointer-events: none;
+  cursor: default;
 }
